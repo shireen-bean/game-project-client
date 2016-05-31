@@ -6,6 +6,8 @@ const createNewGame = function(){
   return $.ajax({
     url: app.host + '/games/',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
   })
 };
 

@@ -2,8 +2,8 @@
 
 const getFormFields = require('../../../lib/get-form-fields');
 
-const api = require('./api');
-const ui = require('./ui');
+const api = require('../../games/api.js');
+const ui = require('../../games/ui.js');
 
 
 const onCreateNewGame = function(event){
