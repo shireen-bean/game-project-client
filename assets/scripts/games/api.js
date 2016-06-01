@@ -15,7 +15,7 @@ const createNewGame = function(){
 
 const index = function(){
   return $.ajax({
-    url: app.host + '/games',
+    url: app.host + '/games/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -35,9 +35,9 @@ const showGame = function(data){
 )};
 
 
-const playerJoin = function (){
+const playerJoin = function (gameId){
   return $.ajax({
-    url: app.host + '/games'+ '/1',
+    url: app.host + '/games/'+ gameId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -46,14 +46,25 @@ const playerJoin = function (){
   }
   )};
 
-const addMove = function (data){
+const addMove = function (data, gameId){
   return $.ajax({
-    url: app.host + '/games'+ '/1',
+    url: app.host + '/games/'+ gameId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
   },
   data:data
+  }
+  )};
+
+const updateGameStatus = function(gameId){
+  return $.ajax({
+    url: app.host + '/games'+ gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+  },
+  data: {'game[over]':'true'}
   }
   )};
 
@@ -65,4 +76,5 @@ module.exports = {
   showGame,
   playerJoin,
   addMove,
+  updateGameStatus,
 };

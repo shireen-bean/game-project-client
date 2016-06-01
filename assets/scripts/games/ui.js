@@ -38,9 +38,9 @@ const successAddMove = function (data){
 
 const successUpdateBoard = function(data){
   console.log('current board '+data.game.cells)
-  let moveData = data.game.cells
-
-  logic.checkStatus(moveData)
+  let moveData = data.game.cells;
+  let gameId = data.game.id;
+  logic.checkStatus(moveData,gameId)
 }
 
 
@@ -53,4 +53,5 @@ module.exports = {
   successPlayerJoin,
   successAddMove,
   successUpdateBoard,
+
 };
