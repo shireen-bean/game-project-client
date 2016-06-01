@@ -1,6 +1,7 @@
 'use strict';
 
-const app = require('../app.js')
+const app = require('../app.js');
+const logic = require('./logic.js');
 
 const success = (data) => {
   console.log(data);
@@ -35,6 +36,13 @@ const successAddMove = function (data){
   console.log(data.game);
 }
 
+const successUpdateBoard = function(data){
+  console.log('current board '+data.game.cells)
+  let moveData = data.game.cells
+
+  logic.checkStatus(moveData)
+}
+
 
 module.exports = {
   failure,
@@ -44,4 +52,5 @@ module.exports = {
   successShowGame,
   successPlayerJoin,
   successAddMove,
+  successUpdateBoard,
 };

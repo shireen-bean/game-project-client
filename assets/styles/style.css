@@ -53,6 +53,11 @@ body {
      color: #5F9EA0;
 }
 
+#container{
+  max-width: 800px;
+  margin: 5em auto;
+}
+
 
 /******************************************
 /* LAYOUT
@@ -62,3 +67,9 @@ body {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+.game-board > form{
+  border: 2px solid black;
+  height: 5em;
+}
