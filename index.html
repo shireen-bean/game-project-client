@@ -6,10 +6,11 @@
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
 
-    
+
 
     </head>
 
+    <div id="container">
     <body class="container-fluid">
 
       <h1>TIC TAC TOE GAME</h1>
@@ -72,7 +73,6 @@
       </form>
 
 
-
       <form id="new-player">
         <fieldset>
           <legend>Join as Player o</legend>
@@ -80,32 +80,77 @@
         </fieldset>
       </form>
 
-      <form id="update-game">
+      <!-- <form id="add-move">
         <input name="game[cell][index]" type="text" value="0">
         <input name="game[cell][value]" type="text" value="x">
         <input name="game[over]" type="text" value="false">
         <input type="submit" value=" Add Move">
-      </form>
+      </form> -->
 
-      <div class="container">
-              <article>
-                <section class="col-xs-4"> container 1</section>
-                <section class="col-xs-4"> container 2</section>
-                <section class="col-xs-4"> container 3</section>
-              </article>
-              <article>
-                <section class="col-xs-4"> container 4</section>
-                <section class="col-xs-4"> container 5</section>
-                <section class="col-xs-4"> container 6</section>
-              </article>
-              <article>
-                <section class="col-xs-4"> container 7</section>
-                <section class="col-xs-4"> container 9</section>
-                <section class="col-xs-4"> container 9</section>
-              </article>
-            </div>
+      <div class="wrapper">
+              <section class="game-board">
+                <form class="game-square col-xs-4" id="index0">
+                  <input name="game[cell][index]" type="submit" value="0">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index1">
+                  <input name="game[cell][index]" type="submit" value="1">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index2">
+                  <input name="game[cell][index]" type="submit" value="2">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index3">
+                  <input name="game[cell][index]" type="submit" value="3">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index4">
+                  <input name="game[cell][index]" type="submit" value="4">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+
+                <form class="game-square col-xs-4" id="index5">
+                  <input name="game[cell][index]" type="submit" value="5">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index6">
+                  <input name="game[cell][index]" type="submit" value="6">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index7">
+                  <input name="game[cell][index]" type="submit" value="7">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+                <form class="game-square col-xs-4" id="index8">
+                  <input name="game[cell][index]" type="submit" value="8">
+                  <input name="game[cell][value]" type="text" value="">
+                  <input type="submit" value="Move Here">
+                </form>
+
+
+              </section>
+      </div>
 
 
 
     </body>
+
+  </div>
 </html>
