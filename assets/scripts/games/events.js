@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields');
 
@@ -6,11 +6,14 @@ const api = require('./api');
 const ui = require('./ui');
 const logic = require('./logic.js');
 
+
+
 const onCreateNewGame = function(event) {
   event.preventDefault();
   api.createNewGame()
   .done(ui.successNewGame)
-  .fail(ui.failure)
+  .fail(ui.failure);
+  current_game++
 }
 
 
@@ -23,7 +26,6 @@ const onShowAllGames = function(event) {
 
 const onShowGame = function(event){
   event.preventDefault();
-
   let data = $('#game-id').val();
   console.log('Show Game ' + data);
   api.showGame(data)
@@ -33,7 +35,8 @@ const onShowGame = function(event){
 
 const onPlayerJoin = function (event) {
   event.preventDefault();
-  api.playerJoin()
+  let gameId = $('#game-id-join').val();
+  api.playerJoin(gameId)
   .done(ui.successPlayerJoin)
   .fail(ui.failure);
 }
@@ -41,7 +44,6 @@ const onPlayerJoin = function (event) {
 const onAddMove = function(event){
   event.preventDefault();
   let data = getFormFields(event.target);
-
   api.addMove(data)
   .done(ui.successAddMove)
   .fail(ui.failure);
@@ -49,9 +51,10 @@ const onAddMove = function(event){
 
 const onMoveHere = function(event){
   event.preventDefault();
-
+  let gameId = $('.game-board').attr('value');
+  console.log('the game id is '+ gameId);
   let data = getFormFields(event.target);
-  api.addMove(data)
+  api.addMove(data,gameId)
   .done(ui.successUpdateBoard)
   .fail(ui.failure);
 }
