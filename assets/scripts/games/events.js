@@ -38,12 +38,23 @@ const onPlayerJoin = function (event) {
   .fail(ui.failure);
 }
 
+const onAddMove = function(event){
+  event.preventDefault();
+  let data = getFormFields(event.target);
+
+  api.addMove(data)
+  .done(ui.successAddMove)
+  .fail(ui.failure);
+
+}
+
 
 const addHandlers = () => {
   $('#new-game').on('submit', onCreateNewGame);
   $('#show-games').on('submit', onShowAllGames);
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
+  $('#add-move').on('submit', onAddMove);
 };
 
 module.exports = {

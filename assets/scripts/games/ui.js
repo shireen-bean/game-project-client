@@ -12,22 +12,27 @@ console.log(error);
 
 const successNewGame = function(data){
   console.log('New Game Created');
-  console.log(data.game)
+  console.log(data.game);
 }
 
 const successShowAllGames = function(data){
   console.log('Displaying all games');
-  console.table(data.games)
+  console.table(data.games);
 }
 
 const successShowGame = function(data){
-  console.log('Showing game' + $('#game-id').val())
-  console.log(data.game)
+  console.log('Showing game' + $('#game-id').val());
+  console.log(data.game);
 }
 
 const successPlayerJoin = function (data){
   console.log('Player o sucessfully joined')
-  console.log(data.game)
+  console.log(data.game);
+}
+
+const successAddMove = function (data){
+  console.log('Move successfully added');
+  console.log(data.game);
 }
 
 
@@ -38,4 +43,5 @@ module.exports = {
   successShowAllGames,
   successShowGame,
   successPlayerJoin,
+  successAddMove,
 };

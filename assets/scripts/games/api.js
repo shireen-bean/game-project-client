@@ -46,12 +46,23 @@ const playerJoin = function (){
   }
   )};
 
+const addMove = function (data){
+  return $.ajax({
+    url: app.host + '/games'+ '/1',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+  },
+  data:data
+  }
+  )};
 
 
 
 module.exports = {
   createNewGame,
   index,
-  playerJoin,
   showGame,
+  playerJoin,
+  addMove,
 };
