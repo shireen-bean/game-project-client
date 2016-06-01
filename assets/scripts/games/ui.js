@@ -15,7 +15,7 @@ const successNewGame = function(data){
   console.log(data.game)
 }
 
-const successShowAllGames = function(){
+const successShowAllGames = function(data){
   console.log('Displaying all games');
   console.table(data.games)
 }
