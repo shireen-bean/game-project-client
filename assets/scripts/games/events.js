@@ -15,7 +15,16 @@ const onCreateNewGame = function(event) {
   api.createNewGame()
   .done(ui.successNewGame)
   .fail(ui.failure);
-  current_game++
+
+  $('.wrapper').on('submit','#index0', onMoveHere);
+  $('.wrapper').on('submit','#index1', onMoveHere);
+  $('.wrapper').on('submit','#index2', onMoveHere);
+  $('.wrapper').on('submit', '#index3', onMoveHere);
+  $('.wrapper').on('submit', '#index4', onMoveHere);
+  $('.wrapper').on('submit', '#index5', onMoveHere);
+  $('.wrapper').on('submit', '#index6', onMoveHere);
+  $('.wrapper').on('submit', '#index7', onMoveHere);
+  $('.wrapper').on('submit', '#index8', onMoveHere);
 }
 
 
@@ -72,6 +81,7 @@ const onMoveHere = function(event){
   .done(ui.successUpdateBoard)
   .fail(ui.failure);
   return currentMove+=1;
+  debugger;
 }
 
 // const onShowModal = function () {
@@ -79,28 +89,22 @@ const onMoveHere = function(event){
 // }
 
 
+
+
 const addHandlers = () => {
   $('#new-game').on('submit', onCreateNewGame);
   $('#show-games').on('submit', onShowAllGames);
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
-  $('#add-move').on('submit', onAddMove);
 
 
   //game board click handlers
-  $('#index0').on('submit', onMoveHere);
-  $('#index1').on('submit', onMoveHere);
-  $('#index2').on('submit', onMoveHere);
-  $('#index3').on('submit', onMoveHere);
-  $('#index4').on('submit', onMoveHere);
-  $('#index5').on('submit', onMoveHere);
-  $('#index6').on('submit', onMoveHere);
-  $('#index7').on('submit', onMoveHere);
-  $('#index8').on('submit', onMoveHere);
+
 
 
 };
 
 module.exports = {
   addHandlers,
+  onMoveHere,
 };
