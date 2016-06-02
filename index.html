@@ -13,26 +13,8 @@
     <div id="container">
     <body class="container-fluid">
 
-    <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-      <li>
-        <form id="sign-out">
-          <fieldset>
-            <legend>Sign Out!</legend>
-            <input type="submit" name="submit" value="Sign Out">
-          </fieldset>
-        </form>
-      </li>
-      <li>
-        <a href="#">Another action</a>
-      </li>
-      <li role="separator" class="divider"></li>
-      <li><a href="#">Separated link</a></li>
-    </ul>
-  </div>
+
+
 
 
       <h1>TIC TAC TOE GAME</h1>
@@ -56,52 +38,52 @@
         </fieldset>
       </form> -->
 
-      <form id="sign-out">
+      <!-- <form id="sign-out">
         <fieldset>
           <legend>Sign Out!</legend>
           <input type="submit" name="submit" value="Sign Out">
         </fieldset>
-      </form>
+      </form> -->
 
-      <form id="change-password">
+      <!-- <form id="change-password">
         <fieldset>
           <legend>Change Password</legend>
           <input type="password" placeholder="Old Password" name="passwords[old]">
           <input type="password" placeholder="New Password" name="passwords[new]">
           <input type="submit" name="submit" value="Change Password">
         </fieldset>
-      </form>
+      </form> -->
 
       <form id="new-game">
         <fieldset>
-          <legend>Start New Game</legend>
+          <!-- <legend>Start New Game</legend> -->
           <input type="submit" value="New Game">
         </fieldset>
       </form>
 
-      <form id="show-games">
+      <!-- <form id="show-games">
         <fieldset>
           <legend>See Games</legend>
           <input type="submit" value="Show All Games">
         </fieldset>
-      </form>
+      </form> -->
 
-      <form id="show-game">
+      <!-- <form id="show-game">
         <fieldset>
           <legend>See Games</legend>
           <input id="game-id" type="text" placeholder="Game Id" name="game[id]">
           <input type="submit" value="Show Game">
         </fieldset>
-      </form>
+      </form> -->
 
 
-      <form id="new-player">
+      <!-- <form id="new-player">
         <fieldset>
           <legend>Join as Player o</legend>
           <input id="game-id-join" type="text" placeholder="Game Id" name="game[id]">
           <input type="submit" value="Join as player o">
         </fieldset>
-      </form>
+      </form> -->
 
       <!-- <form id="add-move">
         <input name="game[cell][index]" type="text" value="0">
@@ -111,7 +93,7 @@
       </form> -->
 
       <div class="wrapper">
-              <section class="game-board" value="4">
+              <section class="game-board" value="5">
                 <form class="game-square col-xs-4" id="index0">
                   <input class="cell-number" name="game[cell][index]" type="submit" value="0">
                   <input class='cell-move' name="game[cell][value]" type="text" value="">
@@ -174,6 +156,56 @@
 
 
 
+<!-- BEGIN DROPDOWN BUTTONS -->
+
+
+
+      <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li>
+          <form id="sign-out">
+            <fieldset>
+              <legend>Sign Out!</legend>
+              <input type="submit" name="submit" value="Sign Out">
+            </fieldset>
+          </form>
+        </li>
+        <li>
+          <button id="password-modal-button" type="button" class="btn btn-default" aria-label="Left Align">
+          <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+      </div>
+
+      <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li>
+        <button id="getGame-modal-button" type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+      </li>
+      <li>
+        <form id="show-games">
+          <fieldset>
+            <input type="submit" value="Show All Games">
+          </fieldset>
+        </form>
+
+      </li>
+      <li role="separator" class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+      </ul>
+      </div>
+
 
 
 
@@ -229,7 +261,47 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
+      <div id="change-password-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">CHANGE PASSWORD</h4>
+            </div>
+            <div class="modal-body">
+              <form id="change-password">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" placeholder="Old Password" name="passwords[old]">
+                  <input type="password" placeholder="New Password" name="passwords[new]">
+                  <input type="submit" name="submit" value="Change Password">
+                </fieldset>
+              </form>
+            </div><!-- /.modal-body -->
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
+
+      <div id="getGame-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">See Game</h4>
+            </div>
+            <div class="modal-body">
+              <form id="show-game">
+                <fieldset>
+                  <legend>See Games</legend>
+                  <input id="game-id" type="text" placeholder="Game Id" name="game[id]">
+                  <input type="submit" value="Show Game">
+                </fieldset>
+              </form>
+            </div><!-- /.modal-body -->
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
 
 

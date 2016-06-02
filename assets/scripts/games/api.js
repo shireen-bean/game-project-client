@@ -25,12 +25,12 @@ const index = function(){
 
 const showGame = function(data){
   return $.ajax({
-    url: app.host + '/games/' + data,
+    url: app.host + '/games/'+data,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
   },
-  data: data
+  //data: data
 }
 )};
 

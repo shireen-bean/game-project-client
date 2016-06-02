@@ -32,6 +32,7 @@ const signOutSuccess= function(){
 
 const changePasswordSuccess = function(data){
   console.log('Password change successful')
+  $('#change-password-modal').modal('hide');
 }
 
 module.exports = {

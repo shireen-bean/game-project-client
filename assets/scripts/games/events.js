@@ -31,8 +31,8 @@ const onShowGame = function(event){
   let data = $('#game-id').val();
   console.log('Show Game ' + data);
   api.showGame(data)
-  // .done(ui.successShowGame)
-  // .fail(ui.failure);
+  .done(ui.successShowGame)
+  .fail(ui.failure);
 }
 
 const onPlayerJoin = function (event) {
