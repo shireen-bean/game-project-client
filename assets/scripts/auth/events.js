@@ -5,6 +5,18 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api');
 const ui = require('./ui');
 
+const onToggleSignUp = function(event){
+  event.preventDefault();
+  $('#sign-in-modal').modal('hide');
+  $('#sign-up-modal').modal('show');
+}
+
+const onToggleSignIn = function(event){
+  event.preventDefault();
+  $('#sign-up-modal').modal('hide');
+  $('#sign-in-modal').modal('show');
+}
+
 const signUp = function (event) {
   event.preventDefault();
   console.log("Sign Up Form Submitted")
@@ -12,8 +24,8 @@ const signUp = function (event) {
   console.log(event.target)
   let data = getFormFields(event.target)
   api.signUp(data)
-  //.done(ui.success)
-  //.fail(ui.failure);
+  .done(ui.signUpSuccess)
+  .fail(ui.failure);
 }
 
 const signIn = function (event) {
@@ -32,7 +44,7 @@ const signOut = function (event) {
   console.log('Sign Out form submitted')
 
   api.signOut()
-  .done(ui.sucess)
+  .done(ui.signOutSuccess)
   .fail(ui.failure)
 }
 
@@ -47,6 +59,12 @@ const onChangePassword = function(event){
 
 
 const addHandlers = () => {
+  $('#sign-in-modal').modal('show');
+  //$('#user-button').on('click', signOut);
+  $('#toggle-sign-up').on('click',onToggleSignUp);
+  $('#toggle-sign-in').on('click',onToggleSignIn);
+  $('#launch-modal').on('click', function(){$('#sign-in-modal').modal('show');})
+
   $('#sign-up').on('submit', signUp);
   $('#sign-in').on('submit', signIn);
   $('#sign-out').on('submit', signOut);

@@ -73,3 +73,7 @@ body {
   border: 2px solid black;
   height: 5em;
 }
+
+.cell-number, .cell-move{
+  display: none;
+}

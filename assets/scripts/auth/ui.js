@@ -12,12 +12,21 @@ console.log(error);
 
 const signInSuccess = function(data){
   app.user = data.user;
+  $('#sign-in-modal').modal('hide');
+  console.log(app)
+  console.log('app.user is '+app.user)
+}
+
+const signUpSuccess = function(data){
+  app.user = data.user;
+  $('#sign-up-modal').modal('hide');
   console.log(app)
   console.log('app.user is '+app.user)
 }
 
 const signOutSuccess= function(){
   app.user = null;
+  $('#sign-in-modal').modal('show');
   console.log('User Successfully signed out')
 }
 

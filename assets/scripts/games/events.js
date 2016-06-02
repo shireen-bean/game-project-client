@@ -6,6 +6,8 @@ const api = require('./api');
 const ui = require('./ui');
 const logic = require('./logic.js');
 
+let currentMove = 1;
+let current_game = 3; /// make this calculate the length of the game array
 
 
 const onCreateNewGame = function(event) {
@@ -29,8 +31,8 @@ const onShowGame = function(event){
   let data = $('#game-id').val();
   console.log('Show Game ' + data);
   api.showGame(data)
-  .done(ui.successShowGame)
-  .fail(ui.failure);
+  // .done(ui.successShowGame)
+  // .fail(ui.failure);
 }
 
 const onPlayerJoin = function (event) {
@@ -49,17 +51,32 @@ const onAddMove = function(event){
   .fail(ui.failure);
 }
 
+const checkNextMove = function(currentMove){
+  console.log(currentMove);
+  if (currentMove % 2 == 1){
+    return 'x'
+  } else {
+    return 'o'
+  }
+}
+
 const onMoveHere = function(event){
   event.preventDefault();
+  let move = checkNextMove(currentMove);
+  console.log('current move is '+move);
   let gameId = $('.game-board').attr('value');
   console.log('the game id is '+ gameId);
+  $("input[name='game[cell][value]']").val(move);
   let data = getFormFields(event.target);
   api.addMove(data,gameId)
   .done(ui.successUpdateBoard)
   .fail(ui.failure);
+  return currentMove+=1;
 }
 
-
+// const onShowModal = function () {
+//   $('#sign-in-modal').modal('show')
+// }
 
 
 const addHandlers = () => {

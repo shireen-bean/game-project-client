@@ -19,6 +19,7 @@ const successNewGame = function(data){
 const successShowAllGames = function(data){
   console.log('Displaying all games');
   console.table(data.games);
+  console.log(data.games.length)
 }
 
 const successShowGame = function(data){
