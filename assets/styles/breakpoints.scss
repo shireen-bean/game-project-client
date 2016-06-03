@@ -1,0 +1,56 @@
+$font-size:12px;
+
+
+@import "breakpoint";
+
+.wrapper {
+  width: 50%;
+  margin: auto 25%;
+}
+
+.game-wrapper{
+  boarder: 2px solid green;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint(tiny) {
+    width: 325px;
+    height: 320px;
+  }
+  @include breakpoint(small) {
+    width: 410px;
+    height: 410px;
+  }
+  @include breakpoint(medium) {
+    width: 420px;
+    height: 420px;
+  }
+  @include breakpoint(large) {
+    width: 700px;
+    height: 700px;
+  }
+  @include breakpoint(xlarge) {
+    width: 800px;
+    height: 320px;
+  }
+}
+
+.game-square{
+  border: 2px solid red;
+  @include breakpoint(xlarge) {
+    height: 170px;
+  }
+  @include breakpoint(large) {
+    height: 130px;
+  }
+  @include breakpoint(medium) {
+    height: 108px;
+  }
+  @include breakpoint(small) {
+    height: 65px;
+  }
+  @include breakpoint(tiny) {
+  height: 50px;
+  }
+
+
+}

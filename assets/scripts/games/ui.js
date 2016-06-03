@@ -61,7 +61,7 @@ const successNewGame = function(data){
       <input class='cell-number' name='game[cell][index]' type='submit' value='8'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
       <input type='submit' value='Move Here'>\
-    </form>");
+    </form></section>");
 
 
 }

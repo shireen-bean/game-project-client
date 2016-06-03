@@ -17,30 +17,6 @@ Developer @GA in NYC
      box-sizing: border-box; /* IE */
 }
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-	clear: both;
-}
-
-.alignright {
-	float: right;
-	padding: 0 0 10px 10px; /* note the padding around a right floated image */
-}
-
-.alignleft {
-	float: left;
-	padding: 0 10px 10px 0; /* note the padding around a left floated image */
-}
-
 /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -49,27 +25,39 @@ body {
      font-size: 12px;
      line-height: 1.4;
      font-family: Helvetica, Arial, sans-serif;
-     color: #5F9EA0;
      background-image: url('../images/black_table.png');
      /*font-family: 'Covered By Your Grace', cursive;*/
 
 }
 
 h1,h2,h3,h4,h5, legend {
-  color: #5F9EA0;
   font-family: 'Covered By Your Grace', cursive;
 }
 
-#container{
-  max-width: 800px;
-  margin: 5em auto;
+
+
+/*.game-board {
+  width: 50%;
+  margin: auto 25%;
+  border: 2px solid red;
 
 }
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
+​
+.wrapper {
+    border: 2px solid green;
+    height: 60vw;
+  }
+}
+​
+@media (max-width: 992px) {
+  .game-board {
+    width: 90%;
+    margin: auto 5%;
+    & section {
+      height: 33.333vw;
+    }
+  }
+}*/
 
 
 /******************************************
@@ -77,10 +65,10 @@ h1,h2,h3,h4,h5, legend {
 /*******************************************/
 
 
-.game-board > form{
+/*.game-board > form{
   border: 2px solid black;
   height: 5em;
-}
+}*/
 
 .cell-number, .cell-move{
   display: none;

@@ -1,0 +1,20 @@
+$cadet-blue: #5F9EA0;
+$plain-white: #fff;
+$plain-black: #000;
+
+@function tint($color, $percentage) {
+  @return mix($plain-white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix($plain-black, $color, $percentage);
+}
+
+
+body{
+  color: $cadet-blue;
+}
+
+h1,h2,h3,h4,h5, legend{
+  color: $cadet-blue;
+}
