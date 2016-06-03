@@ -9,6 +9,7 @@ const success = (data) => {
 };
 
 const failure = (error) => {
+  console.log('error');
 console.log(error);
 };
 
@@ -99,6 +100,7 @@ const addImage = function (spot, move){
     $("#"+spot).html("<img class='move-image' src='../../assets/images/ahi.png' alt='Sushi O'>");
   }
 }
+
 
 
 module.exports = {

@@ -59,7 +59,7 @@ const addMove = function (data, gameId){
 
 const updateGameStatus = function(gameId){
   return $.ajax({
-    url: app.host + '/games'+ gameId,
+    url: app.host + '/games/'+ gameId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
