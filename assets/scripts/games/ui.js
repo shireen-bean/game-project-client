@@ -20,47 +20,47 @@ const successNewGame = function(data){
     <form class='game-square col-xs-4' id='index0'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='0'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index1'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='1'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index2'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='2'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index3'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='3'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index4'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='4'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index5'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='5'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index6'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='6'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index7'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='7'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form>\
     <form class='game-square col-xs-4' id='index8'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='8'>\
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
-      <input type='submit' value='Move Here'>\
+      <input class='submit-move' type='submit' value='Move Here'>\
     </form></section>");
 
 

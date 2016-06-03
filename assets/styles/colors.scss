@@ -18,3 +18,10 @@ body{
 h1,h2,h3,h4,h5, legend{
   color: $cadet-blue;
 }
+
+.submit-move{
+  background-color: transparentize($plain-black, 1);
+  text-shadow:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}

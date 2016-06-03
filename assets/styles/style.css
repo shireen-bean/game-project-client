@@ -35,40 +35,15 @@ h1,h2,h3,h4,h5, legend {
 }
 
 
-
-/*.game-board {
-  width: 50%;
-  margin: auto 25%;
-  border: 2px solid red;
-
-}
-​
-.wrapper {
-    border: 2px solid green;
-    height: 60vw;
-  }
-}
-​
-@media (max-width: 992px) {
-  .game-board {
-    width: 90%;
-    margin: auto 5%;
-    & section {
-      height: 33.333vw;
-    }
-  }
-}*/
-
-
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-
-/*.game-board > form{
-  border: 2px solid black;
-  height: 5em;
-}*/
+.game-square{
+  background-image: url('../images/plate.png');
+  background-size: cover;
+  padding: 2% 2%;
+}
 
 .cell-number, .cell-move{
   display: none;
