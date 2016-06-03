@@ -17,6 +17,10 @@ const signInSuccess = function(data){
   console.log('app.user is '+app.user)
 }
 
+const signInFail = function(){
+  $('#sign-in-modal').effect('shake');
+}
+
 const signUpSuccess = function(data){
   app.user = data.user;
   $('#sign-up-modal').modal('hide');
@@ -41,4 +45,5 @@ module.exports = {
   signInSuccess,
   signOutSuccess,
   changePasswordSuccess,
+  signInFail,
 };
