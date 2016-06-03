@@ -77,9 +77,13 @@ const onMoveHere = function(event){
   console.log('the game id is '+ gameId);
   $("input[name='game[cell][value]']").val(move);
   let data = getFormFields(event.target);
+  let spot = event.target.id;
+  console.log('spot is '+spot)
   api.addMove(data,gameId)
   .done(ui.successUpdateBoard)
   .fail(ui.failure);
+
+  ui.addImage(spot,move)
   return currentMove+=1;
   debugger;
 }

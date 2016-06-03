@@ -62,8 +62,6 @@ const successNewGame = function(data){
       <input class='cell-move' name='game[cell][value]' type='text' value=''>\
       <input class='submit-move' type='submit' value='Move Here'>\
     </form></section>");
-
-
 }
 
 const successShowAllGames = function(data){
@@ -94,6 +92,14 @@ const successUpdateBoard = function(data){
   logic.checkStatus(moveData,gameId)
 }
 
+const addImage = function (spot, move){
+  if (move == 'x'){
+    $("#"+spot).html("<img class='move-image' src='../../assets/images/tamago.png' alt='Sushi X'>");
+  } else {
+    $("#"+spot).html("<img class='move-image' src='../../assets/images/ahi.png' alt='Sushi O'>");
+  }
+}
+
 
 module.exports = {
   failure,
@@ -104,5 +110,6 @@ module.exports = {
   successPlayerJoin,
   successAddMove,
   successUpdateBoard,
+  addImage,
 
 };
