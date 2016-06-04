@@ -21,14 +21,14 @@ h1,h2,h3,h4,h5, legend{
   color: $cadet-blue;
 }
 
-.submit-move{
+.submit-move, #new-game-button, #change-password-button, #sign-out-button {
   background-color: transparentize($plain-black, 1);
   text-shadow:none !important;
   border:none !important;
   box-shadow:none !important;
 }
 
-#sign-in-modal, #sign-up-modal {
+#sign-in-modal, #sign-up-modal, #change-password-modal {
   text-align: center;
 & .modal-body{
   background-color: $modal-background;

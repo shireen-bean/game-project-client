@@ -60,7 +60,7 @@ const onChangePassword = function(event){
 
 const addHandlers = () => {
   $('#sign-in-modal').modal('show');
-  $('#password-modal-button').on('click', function(){$('#change-password-modal').modal('show');});
+  $('#change-password-button').on('click', function(){$('#change-password-modal').modal('show');});
   $('#getGame-modal-button').on('click', function(){$('#getGame-modal').modal('show');});
   //$('#user-button').on('click', signOut);
   $('#toggle-sign-up').on('click',onToggleSignUp);
@@ -69,7 +69,7 @@ const addHandlers = () => {
 
   $('#sign-up').on('submit', signUp);
   $('#sign-in').on('submit', signIn);
-  $('#sign-out').on('submit', signOut);
+  $('#sign-out-button').on('click', signOut);
   $('#change-password').on('submit', onChangePassword);
 };
 

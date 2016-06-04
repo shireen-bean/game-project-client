@@ -1,7 +1,30 @@
 $font-size:12px;
 
-
 @import "breakpoint";
+
+aside{
+  @include breakpoint(xlarge) {
+    width: 15%;
+  }
+  @include breakpoint(medium) {
+    display: none;
+    //make hamburger drop down appear
+  }
+}
+
+h1{
+  @include breakpoint(xlarge) {
+    font-size: 5em;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 4em;
+  }
+  @include breakpoint(small) {
+    font-size: 3em;
+  }
+}
+
+
 
 .wrapper {
   width: 50%;

@@ -96,7 +96,7 @@ const onMoveHere = function(event){
 
 
 const addHandlers = () => {
-  $('#new-game').on('submit', onCreateNewGame);
+  $('#new-game-button').on('click', onCreateNewGame);
   $('#show-games').on('submit', onShowAllGames);
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
