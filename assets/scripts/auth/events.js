@@ -23,9 +23,16 @@ const signUp = function (event) {
   console.log(event)
   console.log(event.target)
   let data = getFormFields(event.target)
+  let name = $("#sign-up input[name='credentials[email]']").val();
+  console.log('name is '+name)
+  let pass = $("#sign-up input[name='credentials[password]']").val();
+  console.log('password is '+pass)
+  $("#sign-in input[name='credentials[email]']").val();
+  $("#sign-in input[name='credentials[password]']").val(pass);
   api.signUp(data)
   .done(ui.signUpSuccess)
   .fail(ui.signInFail);
+  // api.signIn({'credentials[email]':name, 'credentials[password]':pass})
 }
 
 const signIn = function (event) {

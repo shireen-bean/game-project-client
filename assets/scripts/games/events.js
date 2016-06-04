@@ -12,6 +12,7 @@ let current_game = 3; /// make this calculate the length of the game array
 
 const onCreateNewGame = function(event) {
   event.preventDefault();
+  $('#new-game-modal').modal('hide');
   api.createNewGame()
   .done(ui.successNewGame)
   .fail(ui.failure);
@@ -26,7 +27,6 @@ const onCreateNewGame = function(event) {
   $('.wrapper').on('submit', '#index7', onMoveHere);
   $('.wrapper').on('submit', '#index8', onMoveHere);
 }
-
 
 const onShowAllGames = function(event) {
   event.preventDefault();
@@ -52,14 +52,6 @@ const onPlayerJoin = function (event) {
   .fail(ui.failure);
 }
 
-const onAddMove = function(event){
-  event.preventDefault();
-  let data = getFormFields(event.target);
-  api.addMove(data)
-  .done(ui.successAddMove)
-  .fail(ui.failure);
-}
-
 const checkNextMove = function(currentMove){
   console.log(currentMove);
   if (currentMove % 2 == 1){
@@ -77,15 +69,19 @@ const onMoveHere = function(event){
   console.log('the game id is '+ gameId);
   $("input[name='game[cell][value]']").val(move);
   let data = getFormFields(event.target);
+  console.log('Inside some shit: ', data);
+
   let spot = event.target.id;
+  // let data = {'game[cell][index]':spot, 'game[cell][value]':move, 'game[over]':'false'}
+
+
   console.log('spot is '+spot)
   api.addMove(data,gameId)
   .done(ui.successUpdateBoard)
   .fail(ui.failure);
-
+  console.log('second move '+move)
   ui.addImage(spot,move)
   return currentMove+=1;
-  debugger;
 }
 
 // const onShowModal = function () {
@@ -97,10 +93,10 @@ const onMoveHere = function(event){
 
 const addHandlers = () => {
   $('#new-game-button').on('click', onCreateNewGame);
+  $('#new-game-button-secondary').on('click', onCreateNewGame);
   $('#show-games').on('submit', onShowAllGames);
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
-
 
   //game board click handlers
 
