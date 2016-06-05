@@ -46,10 +46,13 @@ aside img{
   width: 75%;
 }
 
-wrapper{
+.wrapper{
   float: left;
-  background-image: url('../images/mat.png');
-  background-repeat: no-repeat;
+}
+
+.wrapper img{
+  width: 100%;
+  padding-top: 5%;
 }
 
 .menu-section{
@@ -78,6 +81,12 @@ wrapper{
 
 #winner-image{
   width: 40%;
+}
+
+#new-game-button-primary{
+  width: 35%;
+  font-size: 2em;
+  line-height:3em;
 }
 
 

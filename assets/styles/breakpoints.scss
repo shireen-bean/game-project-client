@@ -4,17 +4,24 @@ $font-size:12px;
 
 aside{
   @include breakpoint(xlarge) {
-    width: 10%;
+    width: 8%;
   }
   @include breakpoint(medium) {
+    float: none;
     display: none;
+  }
+}
+
+aside .menu-section{
+  @include breakpoint(medium) {
+    display: inline;
   }
 }
 
 
 .wrapper {
   width: 50%;
-  margin: auto 25%;
+  margin: auto 17%;
 }
 
 .game-wrapper{
@@ -22,19 +29,19 @@ aside{
   margin-left: auto;
   margin-right: auto;
   @include breakpoint(xlarge) {
-    width: 800px;
+    width: 1000px;
   }
   @include breakpoint(large) {
-    width: 700px;
+    width: 800px;
   }
   @include breakpoint(medium) {
-    width: 420px;
+    width: 450px;
   }
   @include breakpoint(small) {
-    width: 410px;
+    width: 420px;
   }
   @include breakpoint(tiny) {
-    width: 325px;
+    width: 350px;
   }
 }
 

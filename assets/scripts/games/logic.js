@@ -29,20 +29,21 @@ const removeButtons = function() {
 
 const showWinner = function(winner){
   if (winner == 'x'){
-    $('#new-game-modal .modal-body img').attr('src','assets/images/tamago.png')
+    $('#new-game-modal .modal-title').text('CONGRATS!');
+    $('#new-game-modal .modal-body img').attr('src','assets/images/tamago.png');
+    $('#new-game-modal .modal-body img').attr('alt','Sushi X');
     $('#new-game-modal').modal('show');
   } else if (winner == 'o'){
-    $('#new-game-modal .modal-body img').attr('src','assets/images/ahi.png')
+    $('#new-game-modal .modal-title').text('CONGRATS!');
+    $('#new-game-modal .modal-body img').attr('src','assets/images/ahi.png');
+      $('#new-game-modal .modal-body img').attr('alt','Sushi O');
     $('#new-game-modal').modal('show');
   } else{
-    $('#new-game-modal .modal-title').text('Tie Game!')
-    $('#new-game-modal .modal-body img').attr('src','assets/images/sushi_group.png')
+    $('#new-game-modal .modal-title').text('Tie Game!');
+    $('#new-game-modal .modal-body img').attr('src','assets/images/sushi_group.png');
     $('#new-game-modal').modal('show');
   }
-
 }
-
-
 
 const hasEmptyString = function(element){
   return element === "";

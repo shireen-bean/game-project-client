@@ -67,3 +67,8 @@ h1,h2,h3,h4,h5, legend{
 #container {
   border: 2px solid blue;
 }
+
+#new-game-button-primary{
+  background-color: $modal-background;
+  color: $modal-border;
+}
