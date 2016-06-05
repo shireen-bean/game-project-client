@@ -66,7 +66,7 @@ const onMoveHere = function(event) {
   .fail(ui.failure);
   console.log('second move '+move);
   ui.addImage(spot,move);
-  return currentMove+=1;
+  currentMove++;
 };
 
 const onCreateNewGame = function(event) {
@@ -76,15 +76,7 @@ const onCreateNewGame = function(event) {
   .done(ui.successNewGame)
   .fail(ui.failure);
 
-  $('.wrapper').on('submit','#index0', onMoveHere);
-  $('.wrapper').on('submit','#index1', onMoveHere);
-  $('.wrapper').on('submit','#index2', onMoveHere);
-  $('.wrapper').on('submit', '#index3', onMoveHere);
-  $('.wrapper').on('submit', '#index4', onMoveHere);
-  $('.wrapper').on('submit', '#index5', onMoveHere);
-  $('.wrapper').on('submit', '#index6', onMoveHere);
-  $('.wrapper').on('submit', '#index7', onMoveHere);
-  $('.wrapper').on('submit', '#index8', onMoveHere);
+  currentMove = 1;
 };
 
 const onStatistics = function(event){
@@ -103,6 +95,16 @@ const addHandlers = () => {
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
   $('#statistics-button').on('click',onStatistics);
+
+  $('.wrapper').on('submit','#index0', onMoveHere);
+  $('.wrapper').on('submit','#index1', onMoveHere);
+  $('.wrapper').on('submit','#index2', onMoveHere);
+  $('.wrapper').on('submit', '#index3', onMoveHere);
+  $('.wrapper').on('submit', '#index4', onMoveHere);
+  $('.wrapper').on('submit', '#index5', onMoveHere);
+  $('.wrapper').on('submit', '#index6', onMoveHere);
+  $('.wrapper').on('submit', '#index7', onMoveHere);
+  $('.wrapper').on('submit', '#index8', onMoveHere);
 
 };
 
