@@ -36,7 +36,7 @@ const showWinner = function(winner){
     $('#new-game-modal').modal('show');
   } else{
     $('#new-game-modal .modal-title').text('Tie Game!')
-    $('#new-game-modal .modal-body img').attr('src','../../assets/images/sushi_group.png')
+    $('#new-game-modal .modal-body img').attr('src','assets/images/sushi_group.png')
     $('#new-game-modal').modal('show');
   }
 
