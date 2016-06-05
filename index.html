@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
 
-    <div id="container">
-      <body class="container-fluid">
+<head>
+    <title>Example</title>
+    <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<div id="container">
+
+    <body class="container-fluid">
         <h1>SUSHI TIC TAC TOE</h1>
 
-      <!-- <form id="new-player">
+        <!-- <form id="new-player">
         <fieldset>
           <legend>Join as Player o</legend>
           <input id="game-id-join" type="text" placeholder="Game Id" name="game[id]">
@@ -18,192 +19,216 @@
         </fieldset>
       </form> -->
 
-      <aside id="menu">
-        <h3>MENU</h3>
-        <div class='menu-section'>
-          <button id="new-game-button"><img src='assets/images/wasabi.png' alt='wasabi icon'></button>
-          <p>New Game</p>
-        </div>
-        <div class='menu-section' >
-          <button id='change-password-button'><img  src='assets/images/ginger.png' alt='ginger icon'></button>
-          <p>Change Password</p>
-        </div>
-        <div class='menu-section' >
-          <button id="sign-out-button"><img src='assets/images/shoyu.png' alt='wasabi icon'></button>
-          <p>Sign Out</p>
-        </div>
+        <aside id="menu">
+            <h3>MENU</h3>
+            <div class='menu-section'>
+                <button id="new-game-button"><img src='assets/images/wasabi.png' alt='wasabi icon'></button>
+                <p>New Game</p>
+            </div>
+            <div class='menu-section'>
+                <button id='change-password-button'><img src='assets/images/ginger.png' alt='ginger icon'></button>
+                <p>Change Password</p>
+            </div>
+            <div class='menu-section'>
+                <button id="sign-out-button"><img src='assets/images/shoyu.png' alt='wasabi icon'></button>
+                <p>Sign Out</p>
+            </div>
 
-        <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li>
-            <form id="sign-out">
-              <fieldset>
-                <legend>Sign Out!</legend>
-                <input type="submit" name="submit" value="Sign Out">
-              </fieldset>
-            </form>
-          </li>
-          <li>
-            <button id="password-modal-button" type="button" class="btn btn-default" aria-label="Left Align">
-            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-            </button>
-          </li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-        </div>
+            <div class='menu-section'>
+                <button id="statistics-button" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content='You have played many games.'>
+                    <img src='assets/images/colorful.png' alt='toppings icon'>
+                </button>
+                <p>Stats</p>
+            </div>
 
-        <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li>
-          <button id="getGame-modal-button" type="button" class="btn btn-default" aria-label="Left Align">
-          <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-          </button>
-        </li>
-        <li>
-          <form id="show-games">
-            <fieldset>
-              <input type="submit" value="Show All Games">
-            </fieldset>
-          </form>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li>
+                        <form id="sign-out">
+                            <fieldset>
+                                <legend>Sign Out!</legend>
+                                <input type="submit" name="submit" value="Sign Out">
+                            </fieldset>
+                        </form>
+                    </li>
+                    <li>
+                        <button id="password-modal-button" type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
 
-        </li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-        </ul>
-        </div>
-    </aside>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-wrench" aria-hidden="true">Game Stats</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li>
+                        <button id="getGame-modal-button" type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true">Games</span>
+                        </button>
+                    </li>
+                    <li>
+                        <form id="show-games">
+                            <fieldset>
+                                <input type="submit" value="Show All Games">
+                            </fieldset>
+                        </form>
+
+                    </li>
+                </ul>
+            </div>
+        </aside>
 
         <!-- Game will insert here -->
 
         <div class="wrapper">
-          <img src='assets/images/welcome.png' alt='Welcome Sushi'>
-          <input id='new-game-button-primary' type="submit" value="START PLAYING!">
+            <img src='assets/images/welcome.png' alt='Welcome Sushi'>
+            <input id='new-game-button-primary' type="submit" value="START PLAYING!">
         </div>
 
 
 
-<!-- BEGIN MODAL -->
-<!-- Button trigger modal -->
+        <!-- BEGIN MODAL -->
+        <!-- Button trigger modal -->
 
 
-      <div id="sign-in-modal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-              <h4 class="modal-title">SUSHI TIC TAC TOE</h4>
+        <div id="sign-in-modal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                        <h4 class="modal-title">SUSHI TIC TAC TOE</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="sign-in">
+                            <fieldset>
+                                <legend><img src='assets/images/sushi_group.png' alt='happy sushis'></legend>
+                                <input type="text" placeholder="Email" name="credentials[email]">
+                                <input type="password" placeholder="Password" name="credentials[password]">
+                                <input class="secondary-button" type="button" id="toggle-sign-up" value="Sign Up">
+                                <input class="primary-button" type="submit" name="submit" value="Sign In">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- /.modal-body -->
+                </div>
+                <!-- /.modal-content -->
             </div>
-            <div class="modal-body">
-              <form id="sign-in">
-                <fieldset>
-                  <legend><img src='assets/images/sushi_group.png' alt='happy sushis'></legend>
-                  <input type="text" placeholder="Email" name="credentials[email]">
-                  <input type="password" placeholder="Password" name="credentials[password]">
-                  <input class="secondary-button" type="button" id="toggle-sign-up" value="Sign Up">
-                  <input class="primary-button" type="submit" name="submit" value="Sign In">
-                </fieldset>
-              </form>
-            </div><!-- /.modal-body -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
-      <div id="sign-up-modal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-              <h4 class="modal-title">SUSHI TIC TAC TOE</h4>
+        <div id="sign-up-modal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                        <h4 class="modal-title">SUSHI TIC TAC TOE</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="sign-up">
+                            <fieldset>
+                                <legend><img src='assets/images/sushi_group.png' alt='happy sushis'></legend>
+                                <input type="text" placeholder="Email" name='credentials[email]'>
+                                <input type="password" placeholder="Password" name='credentials[password]'>
+                                <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]">
+                                <input class="secondary button" type="button" id="toggle-sign-in" value="Sign In">
+                                <input class="primary-button" type="submit" name="submit" value="Sign up">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- /.modal-body -->
+                </div>
+                <!-- /.modal-content -->
             </div>
-            <div class="modal-body">
-              <form id="sign-up">
-                <fieldset>
-                  <legend><img src='assets/images/sushi_group.png' alt='happy sushis'></legend>
-                  <input type="text" placeholder="Email" name='credentials[email]'>
-                  <input type="password" placeholder="Password" name='credentials[password]'>
-                  <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]">
-                  <input class="secondary button" type="button" id="toggle-sign-in" value="Sign In">
-                  <input class="primary-button" type="submit" name="submit" value="Sign up">
-                </fieldset>
-              </form>
-            </div><!-- /.modal-body -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
-      <div id="change-password-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">CHANGE PASSWORD</h4>
+        <div id="change-password-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">CHANGE PASSWORD</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="change-password">
+                            <fieldset>
+                                <legend><img src='assets/images/sushi_group.png' alt='happy sushis'></legend>
+                                <input type="password" placeholder="Old Password" name="passwords[old]">
+                                <input type="password" placeholder="New Password" name="passwords[new]">
+                                <input type="submit" name="submit" value="Change Password">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- /.modal-body -->
+                </div>
+                <!-- /.modal-content -->
             </div>
-            <div class="modal-body">
-              <form id="change-password">
-                <fieldset>
-                  <legend><img src='assets/images/sushi_group.png' alt='happy sushis'></legend>
-                  <input type="password" placeholder="Old Password" name="passwords[old]">
-                  <input type="password" placeholder="New Password" name="passwords[new]">
-                  <input type="submit" name="submit" value="Change Password">
-                </fieldset>
-              </form>
-            </div><!-- /.modal-body -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
 
-      <div id="getGame-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">See Game</h4>
+        <div id="getGame-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">See Game</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="show-game">
+                            <fieldset>
+                                <legend>See Games</legend>
+                                <input id="game-id" type="text" placeholder="Game Id" name="game[id]">
+                                <input type="submit" value="Show Game">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- /.modal-body -->
+                </div>
+                <!-- /.modal-content -->
             </div>
-            <div class="modal-body">
-              <form id="show-game">
-                <fieldset>
-                  <legend>See Games</legend>
-                  <input id="game-id" type="text" placeholder="Game Id" name="game[id]">
-                  <input type="submit" value="Show Game">
-                </fieldset>
-              </form>
-            </div><!-- /.modal-body -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
 
-      <div id="new-game-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">CONGRATS!</h4>
+        <div id="new-game-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">CONGRATS!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img id="winner-image" alt='winning sushi image' src=''>
+                        <form id="new-game">
+                            <fieldset>
+                                <!-- <legend>Start New Game</legend> -->
+                                <input id='new-game-button-secondary' type="submit" value="New Game">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- /.modal-body -->
+                </div>
+                <!-- /.modal-content -->
             </div>
-            <div class="modal-body">
-              <img id="winner-image">
-              <form id="new-game">
-                <fieldset>
-                  <!-- <legend>Start New Game</legend> -->
-                  <input id='new-game-button-secondary' type="submit" value="New Game">
-                </fieldset>
-              </form>
-            </div><!-- /.modal-body -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
 
 
     </body>
 
-  </div>
+</div>
+
 </html>

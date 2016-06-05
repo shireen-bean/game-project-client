@@ -101,6 +101,12 @@ const addImage = function (spot, move){
   }
 }
 
+const updateStatistics = function(data){
+  let totalGames = data.games.length;
+  $('#statistics-button').attr('data-content','You have played '+totalGames+' games. Keep it up!')
+  $('#statistics-button').popover('toggle')
+}
+
 
 
 module.exports = {
@@ -113,5 +119,6 @@ module.exports = {
   successAddMove,
   successUpdateBoard,
   addImage,
+  updateStatistics,
 
 };

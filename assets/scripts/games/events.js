@@ -35,6 +35,13 @@ const onShowAllGames = function(event) {
   .fail(ui.failure);
 }
 
+const onShowStatistics = function(event){
+  event.preventDefault();
+  api.index()
+  .done()
+  // .fail(ui.failure)
+}
+
 const onShowGame = function(event){
   event.preventDefault();
   let data = $('#game-id').val();
@@ -84,10 +91,12 @@ const onMoveHere = function(event){
   return currentMove+=1;
 }
 
-// const onShowModal = function () {
-//   $('#sign-in-modal').modal('show')
-// }
-
+const onStatistics = function(event){
+  event.preventDefault();
+  api.index()
+  .done(ui.updateStatistics)
+  .fail(ui.failure)
+}
 
 
 
@@ -95,9 +104,11 @@ const addHandlers = () => {
   $('#new-game-button').on('click', onCreateNewGame);
   $('#new-game-button-secondary').on('click', onCreateNewGame);
   $('#new-game-button-primary').on('click', onCreateNewGame);
+  $('#statistics-button').on('click', onShowStatistics)
   $('#show-games').on('submit', onShowAllGames);
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
+  $('#statistics-button').on('click',onStatistics)
 
   //game board click handlers
 

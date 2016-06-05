@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5, legend{
   color: $cadet-blue;
 }
 
-.submit-move, #new-game-button, #change-password-button, #sign-out-button {
+.submit-move, #new-game-button, #change-password-button, #sign-out-button, #statistics-button {
   background-color: transparentize($plain-black, 1);
   text-shadow:none !important;
   border:none !important;
