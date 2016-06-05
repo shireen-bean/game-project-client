@@ -9,60 +9,50 @@ const onToggleSignUp = function(event){
   event.preventDefault();
   $('#sign-in-modal').modal('hide');
   $('#sign-up-modal').modal('show');
-}
+};
 
 const onToggleSignIn = function(event){
   event.preventDefault();
   $('#sign-up-modal').modal('hide');
   $('#sign-in-modal').modal('show');
-}
+};
 
 const signUp = function (event) {
   event.preventDefault();
-  console.log("Sign Up Form Submitted")
-  console.log(event)
-  console.log(event.target)
-  let data = getFormFields(event.target)
+  let data = getFormFields(event.target);
   let name = $("#sign-up input[name='credentials[email]']").val();
-  console.log('name is '+name)
   let pass = $("#sign-up input[name='credentials[password]']").val();
-  console.log('password is '+pass)
-  $("#sign-in input[name='credentials[email]']").val();
+  $("#sign-in input[name='credentials[email]']").val(name);
   $("#sign-in input[name='credentials[password]']").val(pass);
   api.signUp(data)
   .done(ui.signUpSuccess)
   .fail(ui.signInFail);
   // api.signIn({'credentials[email]':name, 'credentials[password]':pass})
-}
+};
 
 const signIn = function (event) {
   event.preventDefault();
-  console.log("Sign In Form Submitted")
-  console.log(event.target)
-  let data = getFormFields(event.target)
-  console.log('data is '+data)
+  let data = getFormFields(event.target);
   api.signIn(data)
   .done(ui.signInSuccess)
   .fail(ui.failure);
-}
+};
 
 const signOut = function (event) {
   event.preventDefault();
-  console.log('Sign Out form submitted')
 
   api.signOut()
   .done(ui.signOutSuccess)
-  .fail(ui.failure)
-}
+  .fail(ui.failure);
+};
 
 const onChangePassword = function(event){
   event.preventDefault();
-  console.log('Change password submitted')
   let data = getFormFields(event.target);
   api.changePassword(data)
   .done(ui.changePasswordSuccess)
-  .fail(ui.failure)
-}
+  .fail(ui.failure);
+};
 
 
 const addHandlers = () => {
@@ -72,7 +62,7 @@ const addHandlers = () => {
   //$('#user-button').on('click', signOut);
   $('#toggle-sign-up').on('click',onToggleSignUp);
   $('#toggle-sign-in').on('click',onToggleSignIn);
-  $('#launch-modal').on('click', function(){$('#sign-in-modal').modal('show');})
+  $('#launch-modal').on('click', function(){$('#sign-in-modal').modal('show');});
 
   $('#sign-up').on('submit', signUp);
   $('#sign-in').on('submit', signIn);

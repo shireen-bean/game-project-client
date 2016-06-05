@@ -1,13 +1,13 @@
 'use strict';
 
-const app = require('../app.js')
+const app = require('../app.js');
 
 const signUp = (data) => {
   return $.ajax({
     url: app.host + '/sign-up/',
     method: 'POST',
     data: data,
-  })
+  });
 };
 
 const signIn = (data) => {
@@ -15,7 +15,7 @@ const signIn = (data) => {
     url: app.host + '/sign-in/',
     method: 'POST',
     data: data,
-  })
+  });
 };
 
 const signOut = function (){
@@ -36,8 +36,8 @@ const changePassword = function(data) {
       Authorization: 'Token token=' + app.user.token
     },
     data:data
-  })
-}
+  });
+};
 
 module.exports = {
   signUp,

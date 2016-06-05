@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../app.js')
+const app = require('../app.js');
 
 const createNewGame = function(){
   return $.ajax({
@@ -10,7 +10,7 @@ const createNewGame = function(){
       Authorization: 'Token token=' + app.user.token
   }
 }
-)};
+);};
 
 const index = function(){
   return $.ajax({
@@ -20,7 +20,7 @@ const index = function(){
       Authorization: 'Token token=' + app.user.token
   }
 }
-)};
+);};
 
 const showGame = function(data){
   return $.ajax({
@@ -31,7 +31,7 @@ const showGame = function(data){
   },
   //data: data
 }
-)};
+);};
 
 
 const playerJoin = function (gameId){
@@ -43,7 +43,7 @@ const playerJoin = function (gameId){
   },
   data:''
   }
-  )};
+);};
 
 const addMove = function (data, gameId){
   return $.ajax({
@@ -54,7 +54,7 @@ const addMove = function (data, gameId){
   },
   data:data
   }
-  )};
+);};
 
 const updateGameStatus = function(gameId){
   return $.ajax({
@@ -65,7 +65,7 @@ const updateGameStatus = function(gameId){
   },
   data: {'game[over]':'true'}
   }
-  )};
+);};
 
 
 
