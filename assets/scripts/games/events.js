@@ -79,8 +79,6 @@ const onMoveHere = function(event){
   console.log('Inside some shit: ', data);
 
   let spot = event.target.id;
-  // let data = {'game[cell][index]':spot, 'game[cell][value]':move, 'game[over]':'false'}
-
 
   console.log('spot is '+spot)
   api.addMove(data,gameId)

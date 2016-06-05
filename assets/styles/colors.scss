@@ -13,17 +13,17 @@ $modal-border: #bfd8d9;
 }
 
 
-body{
+body {
   color: $cadet-blue;
 }
 
-h1,h2,h3,h4,h5, legend{
+h1, h2, h3, h4, h5, legend {
   color: $cadet-blue;
 }
 
 .submit-move, #new-game-button, #change-password-button, #sign-out-button, #statistics-button {
   background-color: transparentize($plain-black, 1);
-  text-shadow:none !important;
+  text-shadow: none !important;
   border:none !important;
   box-shadow:none !important;
 }

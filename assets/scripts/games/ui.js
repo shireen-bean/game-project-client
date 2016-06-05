@@ -16,7 +16,7 @@ console.log(error);
 const successNewGame = function(data){
   console.log(data.game.id);
   let newGameId = data.game.id;
-
+  $('.wrapper').html('');
   $('.wrapper').html("<section class='game-board' value='"+newGameId+"'>\
     <form class='game-square col-xs-4' id='index0'>\
       <input class='cell-number' name='game[cell][index]' type='submit' value='0'>\
