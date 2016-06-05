@@ -29,10 +29,10 @@ const removeButtons = function() {
 
 const showWinner = function(winner){
   if (winner == 'x'){
-    $('#new-game-modal .modal-body img').attr('src','../../assets/images/tamago.png')
+    $('#new-game-modal .modal-body img').attr('src','assets/images/tamago.png')
     $('#new-game-modal').modal('show');
   } else if (winner == 'o'){
-    $('#new-game-modal .modal-body img').attr('src','../../assets/images/ahi.png')
+    $('#new-game-modal .modal-body img').attr('src','assets/images/ahi.png')
     $('#new-game-modal').modal('show');
   } else{
     $('#new-game-modal .modal-title').text('Tie Game!')

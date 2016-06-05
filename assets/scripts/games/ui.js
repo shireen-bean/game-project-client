@@ -95,9 +95,9 @@ const successUpdateBoard = function(data){
 
 const addImage = function (spot, move){
   if (move == 'x'){
-    $("#"+spot).html("<img class='move-image' src='../../assets/images/tamago.png' alt='Sushi X'>");
+    $("#"+spot).html("<img class='move-image' src='assets/images/tamago.png' alt='Sushi X'>");
   } else {
-    $("#"+spot).html("<img class='move-image' src='../../assets/images/ahi.png' alt='Sushi O'>");
+    $("#"+spot).html("<img class='move-image' src='assets/images/ahi.png' alt='Sushi O'>");
   }
 }
 

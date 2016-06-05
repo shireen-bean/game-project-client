@@ -9,7 +9,7 @@ Developers should use `getFormFields` to retrieve data from html forms for API
 'use strict';
 
 const ajaxDefaults = {
-  url: 'http://localhost:3000',
+  url: 'http://tic-tac-toe.wdibos.com',
   processData: false,
 };
 
