@@ -21,7 +21,11 @@ const signInFail = function(){
 
 const signUpSuccess = function(data) {
   app.user = data.user;
+  $('#sign-up').find("input[name='credentials[email]']").val('');
+  $('#sign-up').find("input[name='credentials[password]']").val('');
+  $('#sign-up').find("input[name='credentials[password_confirmation]']").val('');
   $('#sign-up-modal').modal('hide');
+  $('#sign-in-modal').modal('show');
 };
 
 const signOutSuccess= function(){
@@ -36,6 +40,7 @@ const changePasswordSuccess = function() {
 module.exports = {
   failure,
   success,
+  signUpSuccess,
   signInSuccess,
   signOutSuccess,
   changePasswordSuccess,

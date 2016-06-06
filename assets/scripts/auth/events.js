@@ -25,7 +25,6 @@ const signUp = function (event) {
   $("#sign-in input[name='credentials[email]']").val(name);
   $("#sign-in input[name='credentials[password]']").val(pass);
   api.signUp(data)
-  //.then(api.signIn({'credentials[email]':name, 'credentials[password]':pass}))
   .done(ui.signUpSuccess)
   .fail(ui.failure);
 };
@@ -36,6 +35,8 @@ const signIn = function (event) {
   api.signIn(data)
   .done(ui.signInSuccess)
   .fail(ui.failure);
+  $('#sign-in').find("input[name='credentials[email]']").val('');
+  $('#sign-up').find("input[name='credentials[password]']").val('');
 };
 
 const signOut = function (event) {
