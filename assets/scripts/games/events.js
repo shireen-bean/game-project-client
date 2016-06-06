@@ -88,6 +88,7 @@ const addHandlers = () => {
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
   $('#statistics-button').on('click',onStatistics);
+  $('#join-button').on('click', function(){$('#getGame-modal').modal('show')})
 
   $('.wrapper').on('submit','#index0', onMoveHere);
   $('.wrapper').on('submit','#index1', onMoveHere);
