@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 const api = require('./api');
 
 //This is a rough draft of the tic tac toe game logic
@@ -18,15 +16,15 @@ const api = require('./api');
 */
 
 function shake(selector) {
-        var interval = 100;
-        var distance = 20;
-        var times = 20;
+        let interval = 100;
+        let distance = 20;
+        let times = 15;
 
         $(selector).css('position', 'relative');
 
-        for (var iter = 0; iter < (times + 1) ; iter++) {
+        for (let i = 0; i < (times + 1) ; i++) {
             $(selector).animate({
-                left: ((iter % 2 == 0 ? distance : distance * -1))
+                left: ((i % 2 == 0 ? distance : distance * -1))
             }, interval);
         }
         $(selector).animate({ left: 0 }, interval);
