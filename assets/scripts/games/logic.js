@@ -56,7 +56,8 @@ const showWinner = function(winner){
   } else{
     $('#new-game-modal .modal-title').text('Tie Game!');
     shake($('#new-game-modal .modal-body img'));
-    $('#new-game-modal .modal-body img').attr('src','assets/images/sushi_group.png');
+    $('#new-game-modal .modal-body p').text('Rice game!');
+    $('#new-game-modal .modal-body img').attr('src','assets/images/pair.png');
     $('#new-game-modal').modal('show');
   }
 };
