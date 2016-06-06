@@ -67,6 +67,11 @@ const updateGameStatus = function(gameId){
   }
 );};
 
+// let gameWatcher = resourceWatcher('<server>/games/:id/watch', {
+//       Authorization: 'Token token=<token>'[,
+//       timeout: <timeout>]
+// });
+
 
 
 module.exports = {

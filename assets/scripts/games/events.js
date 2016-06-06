@@ -25,7 +25,6 @@ const onShowStatistics = function(event){
 const onShowGame = function(event){
   event.preventDefault();
   let data = $('#game-id').val();
-  console.log('Show Game ' + data);
   api.showGame(data)
   .done(ui.successShowGame)
   .fail(ui.failure);
@@ -37,12 +36,9 @@ const onPlayerJoin = function (event) {
   api.playerJoin(gameId)
   .done(ui.successPlayerJoin)
   .fail(ui.failure);
-
-
 };
 
 const checkNextMove = function(currentMove){
-  console.log(currentMove);
   if (currentMove % 2 === 1) {
     return 'x';
   } else {
@@ -53,20 +49,15 @@ const checkNextMove = function(currentMove){
 const onMoveHere = function(event) {
   event.preventDefault();
   let move = checkNextMove(currentMove);
-  console.log('current move is '+move);
   let gameId = $('.game-board').attr('value');
-  console.log('the game id is '+ gameId);
   $("input[name='game[cell][value]']").val(move);
   let data = getFormFields(event.target);
-  console.log('Inside some shit: ', data);
 
   let spot = event.target.id;
 
-  console.log('spot is '+spot);
   api.addMove(data,gameId)
   .done(ui.successUpdateBoard)
   .fail(ui.failure);
-  console.log('second move '+move);
   ui.addImage(spot,move);
   currentMove++;
 };
@@ -97,7 +88,6 @@ const addHandlers = () => {
   $('#show-game').on('submit', onShowGame);
   $('#new-player').on('submit', onPlayerJoin);
   $('#statistics-button').on('click',onStatistics);
-  $('#join-button').on('click', function(){$('#getGame-modal').modal('show');});
 
   $('.wrapper').on('submit','#index0', onMoveHere);
   $('.wrapper').on('submit','#index1', onMoveHere);

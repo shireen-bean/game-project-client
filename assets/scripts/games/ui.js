@@ -3,16 +3,15 @@
 const logic = require('./logic.js');
 
 const success = (data) => {
-  console.log(data);
+  //console.log(data);
 };
 
 const failure = (error) => {
-  console.log('error');
-console.log(error);
+  console.log(error);
 };
 
 const successNewGame = function(data){
-  console.log(data.game.id);
+  //console.log(data.game.id);
   let newGameId = data.game.id;
   $('.wrapper').html();
   $('.wrapper').html("<section class='game-board' value='"+newGameId+"'>"+
@@ -64,28 +63,28 @@ const successNewGame = function(data){
 };
 
 const successShowAllGames = function(data){
-  console.log('Displaying all games');
-  console.table(data.games);
-  console.log(data.games.length);
+  //console.log('Displaying all games');
+  //console.table(data.games);
+  //console.log(data.games.length);
 };
 
 const successShowGame = function(data){
-  console.log('Showing game' + $('#game-id').val());
-  console.log(data.game);
+  //console.log('Showing game' + $('#game-id').val());
+  //console.log(data.game);
 };
 
 const successPlayerJoin = function (data){
-  console.log('Player o sucessfully joined');
-  console.log(data.game);
+  //console.log('Player o sucessfully joined');
+  //console.log(data.game);
 };
 
 const successAddMove = function (data){
-  console.log('Move successfully added');
-  console.log(data.game);
+  //console.log('Move successfully added');
+  //console.log(data.game);
 };
 
 const successUpdateBoard = function(data){
-  console.log('current board '+data.game.cells);
+  //console.log('current board '+data.game.cells);
   let moveData = data.game.cells;
   let gameId = data.game.id;
   logic.checkStatus(moveData,gameId);

@@ -18,8 +18,7 @@ const api = require('./api');
 */
 
 const failure = (error) => {
-  console.log('error');
-console.log(error);
+  console.log(error);
 };
 
 const removeButtons = function() {
@@ -52,70 +51,61 @@ const hasEmptyString = function(element){
 
 const checkStatus = function(array,gameId){
   if(array[0] === array[1] && array[0] === array[2] && array[0] !== '') {
-    console.log('Player '+array[0]+' wins!');
     let winner = array[0];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if(array[3] === array[4] && array[3] === array[5] && array[3] !== '') {
-    console.log('Player '+array[3]+' wins!');
+
     let winner = array[3];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if(array[6] === array[7] && array[6] === array[8] && array[6] !== '') {
-    console.log('Player '+array[6]+' wins!');
+
     let winner = array[6];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if(array[0] === array[3] && array[0] === array[6] && array[0] !== '') {
-    console.log('Player '+array[0]+' wins!');
     let winner = array[0];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if (array[1] === array[4] && array[1] === array[7] && array[1] !== '') {
-    console.log('Player '+array[1]+' wins!');
     let winner = array[1];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if (array[2] === array[5] && array[2] === array[8] && array[2] !== '') {
-    console.log('Player '+array[2]+' wins!');
     let winner = array[2];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if (array[0] === array[4] && array[0] === array[8] && array[0] !== '') {
-    console.log('Player '+array[0]+' wins!');
     let winner = array[0];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if (array[2] === array[4] && array[2] === array[6] && array[2] !== ''){
-    console.log('Player '+array[2]+' wins!');
     let winner = array[2];
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
   } else if (!array.some(hasEmptyString)){
-    console.log('tie');
     let winner = 'tie';
     api.updateGameStatus(gameId)
     .done(removeButtons)
     .fail(failure);
     showWinner(winner);
-  } else{
-    console.log('keep playing');
   }
 };
 
