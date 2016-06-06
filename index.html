@@ -40,8 +40,15 @@
                 <p>Stats</p>
             </div>
 
+            <div class='menu-section'>
+                <button id="join-button" type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content='You have played many games.'>
+                    <img src='assets/images/triangle.png' alt='toppings icon'>
+                </button>
+                <p>2 Player</p>
+            </div>
 
-            <div class="dropdown">
+
+            <!-- <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <span class="glyphicon glyphicon-wrench" aria-hidden="true">Game Stats</span>
                 </button>
@@ -52,7 +59,7 @@
                         </button>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </aside>
 
         <!-- Game will insert here -->
@@ -152,16 +159,18 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">See Game</h4>
+                        <h4 class="modal-title">Join Game</h4>
                     </div>
                     <div class="modal-body">
-                        <form id="show-game">
-                            <fieldset>
-                                <legend>See Games</legend>
-                                <input id="game-id" type="text" placeholder="Game Id" name="game[id]">
-                                <input type="submit" value="Show Game">
-                            </fieldset>
-                        </form>
+                      <form id="new-player">
+                      <fieldset>
+                        <legend>Join as Player o</legend>
+                        <input id="game-id-join" type="text" placeholder="Game Id" name="game[id]">
+                        <input class='primary button' type="submit" value="Join Game">
+                        <input class="secondary button" type="button" id="startWatch" value="Stream Game">
+                      </fieldset>
+
+                    </form>
                     </div>
                     <!-- /.modal-body -->
                 </div>
@@ -181,6 +190,7 @@
                     </div>
                     <div class="modal-body">
                         <img id="winner-image" alt='winning sushi image' src='assets/images/sushi_group.png'>
+                        <p>They see you rollin', they hatin'</p>
                         <form id="new-game">
                             <fieldset>
                                 <!-- <legend>Start New Game</legend> -->

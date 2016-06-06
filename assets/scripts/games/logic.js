@@ -31,11 +31,13 @@ const showWinner = function(winner){
     $('#new-game-modal .modal-title').text('CONGRATS!');
     $('#new-game-modal .modal-body img').attr('src','assets/images/tamago.png');
     $('#new-game-modal .modal-body img').attr('alt','Sushi X');
+    $('#new-game-modal .modal-body p').text('They see you rollin, they hatin!');
     $('#new-game-modal').modal('show');
   } else if (winner === 'o') {
     $('#new-game-modal .modal-title').text('CONGRATS!');
     $('#new-game-modal .modal-body img').attr('src','assets/images/ahi.png');
-      $('#new-game-modal .modal-body img').attr('alt','Sushi O');
+    $('#new-game-modal .modal-body img').attr('alt','Sushi O');
+    $('#new-game-modal .modal-body p').text('You are soy awesome');
     $('#new-game-modal').modal('show');
   } else{
     $('#new-game-modal .modal-title').text('Tie Game!');

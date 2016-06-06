@@ -25,9 +25,9 @@ const signUp = function (event) {
   $("#sign-in input[name='credentials[email]']").val(name);
   $("#sign-in input[name='credentials[password]']").val(pass);
   api.signUp(data)
+  //.then(api.signIn({'credentials[email]':name, 'credentials[password]':pass}))
   .done(ui.signUpSuccess)
-  .fail(ui.signInFail);
-  // api.signIn({'credentials[email]':name, 'credentials[password]':pass})
+  .fail(ui.failure);
 };
 
 const signIn = function (event) {
@@ -58,7 +58,7 @@ const onChangePassword = function(event){
 const addHandlers = () => {
   $('#sign-in-modal').modal('show');
   $('#change-password-button').on('click', function(){$('#change-password-modal').modal('show');});
-  $('#getGame-modal-button').on('click', function(){$('#getGame-modal').modal('show');});
+  //$('#getGame-modal-button').on('click', function(){$('#getGame-modal').modal('show');});
   //$('#user-button').on('click', signOut);
   $('#toggle-sign-up').on('click',onToggleSignUp);
   $('#toggle-sign-in').on('click',onToggleSignIn);

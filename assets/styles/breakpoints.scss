@@ -4,7 +4,7 @@ $font-size:12px;
 
 aside{
   @include breakpoint(xlarge) {
-    width: 8%;
+    width: 10%;
   }
   @include breakpoint(medium) {
     float: none;
@@ -20,8 +20,8 @@ aside .menu-section{
 
 
 .wrapper {
-  width: 50%;
-  margin: auto 17%;
+  width: 60%;
+  margin: auto 10%;
 }
 
 .game-wrapper{
@@ -40,9 +40,7 @@ aside .menu-section{
   @include breakpoint(small) {
     width: 420px;
   }
-  @include breakpoint(tiny) {
-    width: 350px;
-  }
+
 }
 
 .game-square{
@@ -57,9 +55,6 @@ aside .menu-section{
   }
   @include breakpoint(small) {
     height: 65px;
-  }
-  @include breakpoint(tiny) {
-  height: 50px;
   }
 }
 
