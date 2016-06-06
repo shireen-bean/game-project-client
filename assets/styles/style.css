@@ -34,7 +34,6 @@
   }
   aside .menu-section {
     width: 10%;
-    display: inline;
   }
 
 }
@@ -48,11 +47,12 @@ body {
      font-family: 'asianFont';
 }
 
-h1,h2,h3,h4,h5, legend {
+h2,h3,h4,h5, legend {
   font-family: 'asianFont';
 }
 
-h1{
+h1 {
+  font-family: 'asianFont';
   text-align: center;
   margin-bottom: 0;
 }

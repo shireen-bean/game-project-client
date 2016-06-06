@@ -30,17 +30,17 @@ h1, h2, h3, h4, h5, legend {
 
 #sign-in-modal, #sign-up-modal, #change-password-modal {
   text-align: center;
-& .modal-body{
+  & .modal-body {
   background-color: $modal-background;
   & input[type='text'], input[type='password']{
-    border: none;
+    border: 0;
     border-bottom: 1px solid $modal-border;
     background-color: $modal-background;
   }
 }
 }
 
-.modal-body input[type='button']{
+.modal-body input[type='button'] {
     background:none;
     border:2px solid $modal-border;
     color:$modal-border;
