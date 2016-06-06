@@ -17,6 +17,21 @@ const api = require('./api');
 
 */
 
+function shake(selector) {
+        var interval = 100;
+        var distance = 20;
+        var times = 20;
+
+        $(selector).css('position', 'relative');
+
+        for (var iter = 0; iter < (times + 1) ; iter++) {
+            $(selector).animate({
+                left: ((iter % 2 == 0 ? distance : distance * -1))
+            }, interval);
+        }
+        $(selector).animate({ left: 0 }, interval);
+    }
+
 const failure = (error) => {
   console.log(error);
 };
@@ -30,16 +45,19 @@ const showWinner = function(winner){
     $('#new-game-modal .modal-title').text('CONGRATS!');
     $('#new-game-modal .modal-body img').attr('src','assets/images/tamago.png');
     $('#new-game-modal .modal-body img').attr('alt','Sushi X');
+    shake($('#new-game-modal .modal-body img'));
     $('#new-game-modal .modal-body p').text('They see you rollin, they hatin!');
     $('#new-game-modal').modal('show');
   } else if (winner === 'o') {
     $('#new-game-modal .modal-title').text('CONGRATS!');
     $('#new-game-modal .modal-body img').attr('src','assets/images/ahi.png');
     $('#new-game-modal .modal-body img').attr('alt','Sushi O');
+    shake($('#new-game-modal .modal-body img'));
     $('#new-game-modal .modal-body p').text('You are soy awesome');
     $('#new-game-modal').modal('show');
   } else{
     $('#new-game-modal .modal-title').text('Tie Game!');
+    shake($('#new-game-modal .modal-body img'));
     $('#new-game-modal .modal-body img').attr('src','assets/images/sushi_group.png');
     $('#new-game-modal').modal('show');
   }

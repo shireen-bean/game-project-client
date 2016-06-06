@@ -72,15 +72,15 @@ webpackJsonp([0],[
 	  var pass = $("#sign-up input[name='credentials[password]']").val();
 	  $("#sign-in input[name='credentials[email]']").val(name);
 	  $("#sign-in input[name='credentials[password]']").val(pass);
-	  api.signUp(data)
-	  //.then(api.signIn({'credentials[email]':name, 'credentials[password]':pass}))
-	  .done(ui.signUpSuccess).fail(ui.failure);
+	  api.signUp(data).done(ui.signUpSuccess).fail(ui.failure);
 	};
 
 	var signIn = function signIn(event) {
 	  event.preventDefault();
 	  var data = getFormFields(event.target);
 	  api.signIn(data).done(ui.signInSuccess).fail(ui.failure);
+	  $('#sign-in').find("input[name='credentials[email]']").val('');
+	  $('#sign-up').find("input[name='credentials[password]']").val('');
 	};
 
 	var signOut = function signOut(event) {
@@ -280,7 +280,11 @@ webpackJsonp([0],[
 
 	var signUpSuccess = function signUpSuccess(data) {
 	  app.user = data.user;
+	  $('#sign-up').find("input[name='credentials[email]']").val('');
+	  $('#sign-up').find("input[name='credentials[password]']").val('');
+	  $('#sign-up').find("input[name='credentials[password_confirmation]']").val('');
 	  $('#sign-up-modal').modal('hide');
+	  $('#sign-in-modal').modal('show');
 	};
 
 	var signOutSuccess = function signOutSuccess() {
@@ -295,6 +299,7 @@ webpackJsonp([0],[
 	module.exports = {
 	  failure: failure,
 	  success: success,
+	  signUpSuccess: signUpSuccess,
 	  signInSuccess: signInSuccess,
 	  signOutSuccess: signOutSuccess,
 	  changePasswordSuccess: changePasswordSuccess,
