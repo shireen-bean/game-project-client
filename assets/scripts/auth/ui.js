@@ -3,7 +3,7 @@
 const app = require('../app.js');
 
 const success = function(data) {
-  console.log(data);
+  //console.log(data);
 };
 
 const failure = function (error) {
