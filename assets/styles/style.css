@@ -41,7 +41,7 @@
 
 body {
   text-align: center;
-     font-size: 12px;
+     font-size: 16px;
      line-height: 1.4;
      background-image: url('../images/black_table.png');
      font-family: 'asianFont';
@@ -53,6 +53,7 @@ h2,h3,h4,h5, legend {
 
 h1 {
   font-family: 'asianFont';
+  font-size: 4em;
   text-align: center;
   margin-bottom: 0;
 }
