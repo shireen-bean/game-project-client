@@ -20,7 +20,7 @@
 /* BASE STYLES
 /*******************************************/
 
-@media (width: 320px) {
+/*@media (width: 320px) {
   #container{
     height: 568px;
     width: 319px;
@@ -36,7 +36,7 @@
     width: 10%;
   }
 
-}
+}*/
 
 
 body {
